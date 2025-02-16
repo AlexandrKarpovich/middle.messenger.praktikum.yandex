@@ -1,0 +1,15 @@
+.nav {
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    margin-top: 20px;
+    margin-left: 20px;
+    position: relative;
+
+    &__link {
+      color: var(--main-color);
+      text-decoration: none;
+    }
+  }
+}

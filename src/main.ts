@@ -1,29 +1,45 @@
-import './style.css'
-// import Handlebars from 'handlebars';
-// import * as Component from './components';
-// import * as Pages from './pages';
+import './style.scss'
+
+import Handlebars from 'handlebars';
+import * as Components from './components';
+import * as Pages from './pages';
+
+const pages = {
+  'login': [ Pages.LoginPage ],
+  'register': [ Pages.RegisterPage ],
+  'error': [ Pages.ErrorPage ],
+  'nav': [ Pages.NavigatePage ],
+  'chat': [ Pages.ChatPage ],
+  'profile': [ Pages.ProfilePage ],
+};
+
+Object.entries(Components).forEach(([ name, template ]) => {
+  Handlebars.registerPartial(name, template);
+});
+
+function navigate(page: string) {
+  //@ts-ignore
+  const [ source, context ] = pages[page];
+  const container = document.getElementById('app')!;
+
+  const temlpatingFunction = Handlebars.compile(source);
+  console.log('html', temlpatingFunction(context))
+  container.innerHTML = temlpatingFunction(context);
+}
+
+document.addEventListener('DOMContentLoaded', () => navigate('nav'));
+// document.addEventListener('DOMContentLoaded', () => navigate('login'));
+
+document.addEventListener('click', e => {
+  //@ts-ignore
+  const page = e.target.getAttribute('page');
+  if (page) {
+    navigate(page);
+
+    e.preventDefault();
+    e.stopImmediatePropagation();
+  }
+});
 
 
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
-
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)

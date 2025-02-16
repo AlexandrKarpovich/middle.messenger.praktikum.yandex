@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="registr">
+        {{> Title title="Регистрация" }}
+
+        <form class="registr__form">
+            <div class="registr__form__input">
+            {{> Input label="Почта" }}
+            {{> Input label="Логин" }}
+            {{> Input label="Имя" }}
+            {{> Input label="Фамилия" }}
+            {{> Input label="Телефон" }}
+            {{> Input label="Пароль" }}
+            {{> Input label="Пароль (ещё раз)" }}
+        </div>
+        <div class="registr__form__button">
+            {{> Button label="Зарегистрироваться" type="primary" }}
+            {{> Button label="Войти" type="link" }}
+        </div>
+        </form>
+    </div>
+</div>
