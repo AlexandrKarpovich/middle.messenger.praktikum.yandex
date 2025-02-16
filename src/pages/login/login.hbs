@@ -1,27 +1,18 @@
-<div class="login-card">
-    <h2 class="login-card__title">Вход</h2>
-    <form class="login-card__form">
-        <label for="login" class="login-card__label">Логин</label>
-        <input
-                type="text"
-                id="login"
-                class="login-card__input"
-                value="ivanivanov"
-                placeholder="Логин"
-        />
+<div class="container">
+    <div class="login">
+        {{> Title title="Вход" }}
 
-        <label for="password" class="login-card__label">Пароль</label>
-        <input
-                type="password"
-                id="password"
-                class="login-card__input"
-                value="********"
-                placeholder="Пароль"
-        />
+        <form class="login__form">
 
-        <button type="submit" class="login-card__button">
-            Авторизоваться
-        </button>
-    </form>
-    <a href="#" class="login-card__register-link">Нет аккаунта?</a>
+            <div class="login__form__input">
+                {{> Input label="Логин" }}
+                {{> Input label="Пароль" }}
+            </div>
+            <div class="login__form__button">
+                {{> Button label="Авторизоваться" type="primary" }}
+                {{> Button label="Нет аккаунта?" type="link" }}
+            </div>
+
+        </form>
+    </div>
 </div>

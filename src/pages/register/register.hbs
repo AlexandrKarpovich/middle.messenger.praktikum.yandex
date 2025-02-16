@@ -1,77 +1,21 @@
-<div class="registr-card">
-    <h2 class="registr-card__title">Регистрация</h2>
-    <form class="registr-card__form">
-        <label for="email" class="registr-card__label">Почта</label>
-        <input
-                type="text"
-                id="email"
-                class="registr-card__input"
-                value="pochta@yandex.ru"
-                placeholder="pochta@yandex.ru"
-        />
+<div class="container">
+    <div class="registr">
+        {{> Title title="Регистрация" }}
 
-        <label for="login" class="registr-card__label">Логин</label>
-        <input
-                type="text"
-                id="login"
-                class="registr-card__input"
-                value="ivanivanov"
-                placeholder="Логин"
-        />
-
-        <label for="first_name" class="registr-card__label">Имя</label>
-        <input
-                type="text"
-                id="first_name"
-                class="registr-card__input"
-                value="Иван"
-                placeholder="Имя"
-        />
-
-        <label for="second_name" class="registr-card__label">Фамилия</label>
-        <input
-                type="text"
-                id="second_name"
-                class="registr-card__input"
-                value="Иванов"
-                placeholder="Фамилия"
-        />
-
-        <label for="phone" class="registr-card__label">Телефон</label>
-        <input
-                type="text"
-                id="phone"
-                class="registr-card__input"
-                value="+7 (909) 967 30 30"
-                placeholder="+7 (909) 967 30 30"
-        />
-
-        <label for="password" class="registr-card__label">Пароль</label>
-        <input
-                type="password"
-                id="password"
-                class="registr-card__input"
-                value="********"
-                placeholder="Пароль"
-        />
-
-        <label for="password_repeat" class="registr-card__label">
-            Пароль (ещё раз)
-        </label>
-        <input
-                type="password"
-                id="password_repeat"
-                class="registr-card__input"
-                value="********"
-                placeholder="Пароль (ещё раз)"
-        />
-
-        <!-- Пример отображения ошибки -->
-        <p class="registr-card__error-message">Пароли не совпадают</p>
-
-        <button type="submit" class="registr-card__button">
-            Зарегистрироваться
-        </button>
-    </form>
-    <a href="#" class="registr-card__link">Войти</a>
+        <form class="registr__form">
+            <div class="registr__form__input">
+            {{> Input label="Почта" }}
+            {{> Input label="Логин" }}
+            {{> Input label="Имя" }}
+            {{> Input label="Фамилия" }}
+            {{> Input label="Телефон" }}
+            {{> Input label="Пароль" }}
+            {{> Input label="Пароль (ещё раз)" }}
+        </div>
+        <div class="registr__form__button">
+            {{> Button label="Зарегистрироваться" type="primary" }}
+            {{> Button label="Войти" type="link" }}
+        </div>
+        </form>
+    </div>
 </div>
