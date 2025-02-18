@@ -1,8 +1,12 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    root: '.',
-    build: {
-        outDir: 'dist'
-    }
+    root:'.',
+    server: {
+        port: 3000,
+    },
+    preview: {
+        port: 3000,
+    },
+    assetsInclude: ["**/*.hbs"],
 })
