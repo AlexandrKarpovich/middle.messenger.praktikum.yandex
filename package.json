@@ -15,9 +15,14 @@
     "format:check": "prettier --check \"src/**/*.{js,ts,tsx,css,html,json}\"",
     "remove-empty-lines": "powershell -Command \"Get-ChildItem src -Recurse -Include *.ts,*.js,*.css,*.scss,*.html,*.json | ForEach-Object { (Get-Content $_) | Where-Object { $_ -ne '' } | Set-Content $_ }; Get-ChildItem src -Recurse -Include *.ts,*.js,*.css,*.scss,*.html,*.json | ForEach-Object { Add-Content $_ '' }\"",
     "fix": "npm run format && npm run remove-empty-lines",
-    "precommit": "npm run fix"
+    "precommit": "npm run fix && npm run lint",
+    "lint": "eslint . --ext .js,.ts,.tsx,.jsx", // Проверка кода без автоматического исправления
+    "lint:fix": "eslint . --ext .js,.ts,.tsx,.jsx --fix", // Автоматическое исправление проблем
+    "lint:check": "eslint . --ext .js,.ts,.tsx,.jsx --quiet" // Проверка кода без вывода предупреждений
   },
   "devDependencies": {
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-typescript": "^0.14.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
     "prettier": "^3.5.1",
@@ -31,7 +36,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run precommit && git add ."
+      "pre-commit": "npm run precommit  && npm run remove-empty-lines && git add ."
     }
   },
   "lint-staged": {
@@ -42,4 +47,3 @@
     ]
   }
 }
-
