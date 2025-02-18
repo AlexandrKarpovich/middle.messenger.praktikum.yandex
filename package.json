@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "engine": {
+  "engines": {
     "node": ">=18"
   },
   "scripts": {
@@ -13,7 +13,7 @@
     "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{js,ts,tsx,css,html,json}\"",
     "format:check": "prettier --check \"src/**/*.{js,ts,tsx,css,html,json}\"",
-    "remove-empty-lines": "find . -type f -name '*.ts' -exec sed -i '/^$/d' {} + && find . -type f -exec sed -i -e '$a\\' {} +",
+    "remove-empty-lines": "powershell -Command \"Get-ChildItem src -Recurse -Include *.ts,*.js,*.css,*.scss,*.html,*.json | ForEach-Object { (Get-Content $_) | Where-Object { $_ -ne '' } | Set-Content $_ }; Get-ChildItem src -Recurse -Include *.ts,*.js,*.css,*.scss,*.html,*.json | ForEach-Object { Add-Content $_ '' }\"",
     "fix": "npm run format && npm run remove-empty-lines",
     "precommit": "npm run fix"
   },
@@ -42,3 +42,4 @@
     ]
   }
 }
+
