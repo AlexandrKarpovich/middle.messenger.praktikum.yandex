@@ -10,9 +10,14 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "start": "vite build && node server.cjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write \"src/**/*.{js,ts,tsx,css,html,json}\"",
+    "format:check": "prettier --check \"src/**/*.{js,ts,tsx,css,html,json}\""
   },
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.5.1",
     "sass": "^1.84.0",
     "typescript": "~5.7.2",
     "vite": "^6.1.0"
@@ -20,5 +25,16 @@
   "dependencies": {
     "express": "^4.21.2",
     "handlebars": "^4.7.8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,tsx,css,html,json}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
