@@ -12,7 +12,8 @@
     "start": "vite build && node server.cjs",
     "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{js,ts,tsx,css,html,json}\"",
-    "format:check": "prettier --check \"src/**/*.{js,ts,tsx,css,html,json}\""
+    "format:check": "prettier --check \"src/**/*.{js,ts,tsx,css,html,json}\"",
+    "remove-empty-lines": "find . -type f -name '*.ts' -exec sed -i '/^$/d' {} + && find . -type f -exec sed -i -e '$a\\' {} +"
   },
   "devDependencies": {
     "husky": "^9.1.7",
@@ -28,7 +29,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && npm run remove-empty-lines && git add ."
     }
   },
   "lint-staged": {

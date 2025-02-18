@@ -5,12 +5,10 @@
   width: 340px;
   height: 450px;
   text-align: center;
-
   &__form {
     display: flex;
     flex-direction: column;
     gap: 130px;
-
     &__input {
       width: 100%;
     }
