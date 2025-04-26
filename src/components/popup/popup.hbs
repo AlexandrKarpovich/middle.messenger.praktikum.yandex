@@ -1,0 +1,17 @@
+<div class="popup">
+    <div class="popup__inner">
+        {{> Title title=title}}
+
+        <div class="popup__link">
+            {{#if isLink}}
+                {{> Link href=linkHref label=linkLabel }}
+            {{else}}
+                {{> Input name=inputName type=inputType label=InputLabel}}
+            {{/if}}
+        </div>
+
+        {{> Button type=btnType class=btnClass label=btnLabel}}
+    </div>
+</div>
+
+
