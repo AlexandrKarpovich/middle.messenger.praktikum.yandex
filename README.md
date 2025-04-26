@@ -1,7 +1,8 @@
-# [netlify](https://dreamy-rabanadas-119ad4.netlify.app/)
+#### Можно посмотреть по сылке названия проэкта
+# [netlify](https://peppy-kataifi-67414a.netlify.app/)
 
 ### Deploy
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a9879e10-df7c-4317-894d-d855df2be063/deploy-status)](https://app.netlify.com/sites/dreamy-rabanadas-119ad4/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/659b4ecb-259f-4927-9378-a4b4cdd1cc66/deploy-status)](https://app.netlify.com/sites/peppy-kataifi-67414a/deploys)
 
 ### [Макет](https://www.figma.com/design/jF5fFFzgGOxQeB4CmKWTiE/Chat_external_link?node-id=0-1&p=f&t=ikbd2TZeyRr3MWw4-0)
 
@@ -32,5 +33,4 @@
 [//]: # ([![ESLint]&#40;https://img.shields.io/badge/lint-eslint-brightgreen.svg&#41;]&#40;https://eslint.org&#41;)
 [//]: # ([![Prettier]&#40;https://img.shields.io/badge/code_style-prettier-ff69b4.svg&#41;]&#40;https://prettier.io&#41;)
 
-Можно посмотреть по сылке
-https://dreamy-rabanadas-119ad4.netlify.app/
+
