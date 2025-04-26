@@ -1,0 +1,59 @@
+<main class="profile">
+    <!-- Левая панель с кнопкой «Назад» -->
+    <aside class="profile__sidebar">
+        <button class="profile__back-button" type="button">←</button>
+    </aside>
+
+    <form class="profile__main">
+        <div class="avatar">
+            <div class="avatar__inner">
+                <img
+                    class="avatar__img"
+                    src="./public/avatar-icon.svg"
+                    alt="Аватар-name"
+                />
+                <span class="avatar__change">Поменять аватар</span>
+            </div>
+            <div class="avatar__username">Иван</div>
+        </div>
+
+        <ul class="info">
+            <li class="info__item">
+                <label class="info__item-label" for="email">Почта</label>
+                <input type="email" id="email" name="email" class="info__item-value" value="pochta@yandex.ru" required />
+            </li>
+            <li class="info__item">
+                <label class="info__item-label" for="login">Логин</label>
+                <input type="text" id="login" name="login" class="info__item-value" value="ivanivanov" required />
+            </li>
+            <li class="info__item">
+                <label class="info__item-label" for="first_name">Имя</label>
+                <input type="text" id="first_name" name="first_name" class="info__item-value" value="Иван" required />
+            </li>
+            <li class="info__item">
+                <label class="info__item-label" for="second_name">Фамилия</label>
+                <input type="text" id="second_name" name="second_name" class="info__item-value" value="Иванов" required />
+            </li>
+            <li class="info__item">
+                <label class="info__item-label" for="display_name">Имя в чате</label>
+                <input type="text" id="display_name" name="display_name" class="info__item-value" value="Иван" required />
+            </li>
+            <li class="info__item">
+                <label class="info__item-label" for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" class="info__item-value" value="+7 (909) 967 30 30" required />
+            </li>
+        </ul>
+        <ul class="actions">
+            <li class="actions__item">
+                {{> Button label="Изменить данные" class="link button__link--left" type="button" }}
+            </li>
+            <li class="actions__item">
+                {{> Button label="Изменить пароль" class="link button__link--left" type="button" }}
+            </li>
+            <li class="actions__item">
+                {{> Button label="Выйти" class="link--danger button__link--left" type="button" }}
+            </li>
+        </ul>
+    </form>
+</main>
+

@@ -1,0 +1,35 @@
+.registr {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 340px;
+    height: 615px;
+    text-align: center;
+
+    &__title {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &__input {
+            width: 100%;
+        }
+        &__button {
+            width: 100%;
+        }
+    }
+
+    &__error-message {
+        margin-bottom: 15px;
+        font-size: 12px;
+        color: var(--error-color);
+        text-align: left;
+    }
+
+}
