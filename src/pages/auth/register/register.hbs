@@ -1,0 +1,25 @@
+<main>
+    <div class="container">
+        <div class="registr">
+            {{> Title title="Регистрация" }}
+
+            <form class="registr__form">
+                <div class="registr__form__input">
+                    {{> Input label="Почта" name="mail" type="mail" }}
+                    {{> Input label="Логин" name="login" type="text" }}
+                    {{> Input label="Имя" name="name" type="text" }}
+                    {{> Input label="Фамилия" name="surname" type="text" }}
+                    {{> Input label="Телефон" name="number" type="number"}}
+                    {{> Input label="Пароль" name="password" type="password" }}
+                    {{> Input label="Пароль (ещё раз)" name="password2" type="password" }}
+                </div>
+                <div class="registr__form__button">
+                    {{> Button label="Зарегистрироваться" class="primary" type="submit" }}
+                    {{> Button label="Войти" class="link" type="button" }}
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+

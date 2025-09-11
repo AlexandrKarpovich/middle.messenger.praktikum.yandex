@@ -1,0 +1,78 @@
+<main>
+    <div class="chat">
+        <aside class="chat__sidebar">
+            <div class="chat__profile">Профиль</div>
+            <input
+                type="search"
+                class="chat__search"
+                placeholder="Поиск"
+                name="search"
+            />
+            <ul class="chat__contacts">
+                <li class="chat__contact">
+                    <div class="chat__contact-name">Андрей</div>
+                    <div class="chat__contact-message">Изображение</div>
+                </li>
+                <li class="chat__contact">
+                    <div class="chat__contact-name">Киноклуб</div>
+                    <div class="chat__contact-message">Вы: стикер</div>
+                </li>
+                <li class="chat__contact chat__contact--active">
+                    <div class="chat__contact-name">Вадим</div>
+                    <div class="chat__contact-message">Вы: Круто!</div>
+                </li>
+            </ul>
+        </aside>
+
+        <section class="chat__main">
+            <header class="chat__header">
+                <div class="chat__header-name">Вадим</div>
+                <button class="chat__header-menu-button" type="button">⋮</button>
+                <div class="chat__header-menu">
+                    <button class="chat__header-menu-item" type="button">Добавить пользователя</button>
+                    <button class="chat__header-menu-item" type="button">Удалить пользователя</button>
+                </div>
+            </header>
+
+            <div class="chat__conversation">
+                <div class="chat__message chat__message--incoming">
+                    <div class="chat__message-text">
+                        Привет! Смотри, тут всплыл интересный кусок лунной космической истории...
+                    </div>
+                    <img
+                            class="chat__message-image"
+                            src="https://via.placeholder.com/200"
+                            alt="camera"
+                    />
+                    <div class="chat__message-time">11:56</div>
+
+                    <!-- Пример всплывающего меню с вложениями -->
+<!--                    <div class="chat__popover">-->
+<!--                        <div class="chat__popover-item">Фото или Видео</div>-->
+<!--                        <div class="chat__popover-item">Файл</div>-->
+<!--                        <div class="chat__popover-item">Локация</div>-->
+<!--                    </div>-->
+                </div>
+
+                <div class="chat__message chat__message--outgoing">
+                    <div class="chat__message-text">Круто!</div>
+                    <div class="chat__message-time">12:00</div>
+                </div>
+            </div>
+
+            <footer class="chat__footer">
+                <form>
+                    <input
+                        type="text"
+                        class="chat__input"
+                        placeholder="Сообщение"
+                        name="message"
+                        type="text"
+                    />
+                    <button class="chat__send-button" type="submit">➜</button>
+                </form>
+            </footer>
+        </section>
+    </div>
+</main>
+
